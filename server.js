@@ -6,6 +6,7 @@
 require(__dirname + '/Resources/config.js');
 var fs = require('fs');
 var net = require('net');
+var express = require('express');
 require('./packet.js')
 //Load the initializers
 var init_files = fs.readdirSync(__dirname + "/Initializers");

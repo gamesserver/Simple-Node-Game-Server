@@ -9,6 +9,7 @@
     "performance-now": "*",
     "mongoose" : "4.1.11",
     "underscore": "*",
-    "mongodb": "^1.4.39"
+    "mongodb": "^1.4.39",
+    "express": "*"
   }
 }

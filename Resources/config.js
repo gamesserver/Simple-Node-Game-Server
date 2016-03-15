@@ -4,6 +4,7 @@
 //Import required libraries
 var args = require('minimist')(process.argv.slice(2));
 var extend = require('extend');
+var express = require('express');
 
 //Store the environment variable
 var environment = args.env || "test";
@@ -25,7 +26,7 @@ var common_conf = {
 var conf = {
     production: {
         ip: args.ip || "0.0.0.0",
-        port: args.port || 5000,
+        port: process.env.PORT || 3000,
         // database: "mongodb://127.0.0.1/poker_mmorl_prod"
 	    // database: "mongodb://saltytaro:maluka333@ds011379.mlab.com:11379/pokermmorl"
         database: "mongodb://saltytaro:maluka333@ds011379.mlab.com:11379/pokermmorl"
@@ -34,7 +35,7 @@ var conf = {
 
     test: {
         ip: args.ip || "0.0.0.0",
-        port: args.port || 5000,
+        port: process.env.PORT || 3000,
         // database: "mongodb://127.0.0.1/poker_mmorl_test"
 	    database: "mongodb://saltytaro:maluka333@ds011379.mlab.com:11379/pokermmorl"
         // database: "mongodb://ds064718.mongolab.com:27769/demo_database"
