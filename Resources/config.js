@@ -21,18 +21,24 @@ var common_conf = {
     starting_zone: "rm_map_home"
 };
 
-//Environment Specific Configuration
+// Environment Specific Configuration
 var conf = {
     production: {
         ip: args.ip || "0.0.0.0",
-        port: args.port || 8081,
-        database: "mongodb://127.0.0.1/poker_mmorl_prod"
+        port: args.port || 5000,
+        // database: "mongodb://127.0.0.1/poker_mmorl_prod"
+	    // database: "mongodb://saltytaro:maluka333@ds011379.mlab.com:11379/pokermmorl"
+        database: "mongodb://saltytaro:maluka333@ds011379.mlab.com:11379/pokermmorl"
+        // database: "mongodb://ds064718.mongolab.com:27769/demo_database"
     },
 
     test: {
         ip: args.ip || "0.0.0.0",
-        port: args.port || 8082,
-        database: "mongodb://127.0.0.1/poker_mmorl_test"
+        port: args.port || 5000,
+        // database: "mongodb://127.0.0.1/poker_mmorl_test"
+	    database: "mongodb://saltytaro:maluka333@ds011379.mlab.com:11379/pokermmorl"
+        // database: "mongodb://ds064718.mongolab.com:27769/demo_database"
+        // database: "mongodb://demo_user:demo_password@ds064718.mlab.com:64718/pmmorl?authSource=dbWithUserCredentials"
     }
 };
 
