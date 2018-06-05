@@ -27,19 +27,13 @@ var conf = {
     production: {
         ip: args.ip || "0.0.0.0",
         port: process.env.PORT || 3000,
-        // database: "mongodb://127.0.0.1/poker_mmorl_prod"
-	    // database: "mongodb://saltytaro:maluka333@ds011379.mlab.com:11379/pokermmorl"
-        database: "mongodb://saltytaro:maluka333@ds011379.mlab.com:11379/pokermmorl"
-        // database: "mongodb://ds064718.mongolab.com:27769/demo_database"
+        database: "mongodb://<dbuser>:<dbpassword>@ds021681.mlab.com:21681/gmud"
     },
 
     test: {
         ip: args.ip || "0.0.0.0",
         port: process.env.PORT || 3000,
-        // database: "mongodb://127.0.0.1/poker_mmorl_test"
-	    database: "mongodb://saltytaro:maluka333@ds011379.mlab.com:11379/pokermmorl"
-        // database: "mongodb://ds064718.mongolab.com:27769/demo_database"
-        // database: "mongodb://demo_user:demo_password@ds064718.mlab.com:64718/pmmorl?authSource=dbWithUserCredentials"
+        database: "mongodb://<dbuser>:<dbpassword>@ds021681.mlab.com:21681/gmud"
     }
 };
 
